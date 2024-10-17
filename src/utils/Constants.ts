@@ -72,17 +72,25 @@ export class Constants {
 
   static readonly HMRC_TOKEN_ENDPOINT_PATH = "/oauth/token";
 
+  static readonly HMRC_EXPECTED_TOKEN_EXPIRES_IN = 14400;
+  
+  static readonly HMRC_VERIFY_ENDPOINT_PATH = "verify/personal";
+  
+  static readonly HMRC_USER_AGENT = "one-login-bav-cri";
+  
   static readonly EXPERIAN_TOKEN_ENDPOINT_PATH = "/oauth2/experianone/v1/token";
 
-  static readonly HMRC_EXPECTED_TOKEN_EXPIRES_IN = 14400;
+  static readonly EXPERIAN_VERIFY_ENDPOINT_PATH = "services/v0/applications/3";
 
-  static readonly HMRC_VERIFY_ENDPOINT_PATH = "verify/personal";
+  static readonly EXPERIAN_EXPECTED_TOKEN_EXPIRES_IN = 14400;
 
-  static readonly HMRC_USER_AGENT = "one-login-bav-cri";
+  static readonly EXPERIAN_USER_AGENT = "one-login-bav-cri";
   
   static readonly MAX_VERIFY_ATTEMPTS = 2;
 
   static readonly TXMA_FIELDS_TO_SHOW = ["event_name", "session_id", "govuk_signin_journey_id", "attemptNum"];
+
+  static readonly EXPERIAN_PRODUCT_NAME = "BAVConsumer-Standard";
 }
 
 export const EnvironmentVariables = {
@@ -109,6 +117,7 @@ export const EnvironmentVariables = {
 	HMRC_MAX_RETRIES: "HMRC_MAX_RETRIES",
 	HMRC_TOKEN_BACKOFF_PERIOD_MS: "HMRC_TOKEN_BACKOFF_PERIOD_MS",
 	EXPERIAN_BASE_URL: "EXPERIAN_BASE_URL",
+	EXPERIAN_MAX_RETRIES: "EXPERIAN_MAX_RETRIES",
 	EXPERIAN_TOKEN_TABLE: "EXPERIAN_TOKEN_TABLE",
 	EXPERIAN_PASSWORD_SSM_PATH: "EXPERIAN_PASSWORD_SSM_PATH",
 	EXPERIAN_USERNAME_SSM_PATH: "EXPERIAN_USERNAME_SSM_PATH",
